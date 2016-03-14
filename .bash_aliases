@@ -35,6 +35,7 @@ alias untarbz1="tar jxvf"
 alias ungz2="bunzip2 -k"
 
 ## Cool shortcut
+alias doc="docker-compose"
 alias top_process="ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 alias mysql="mysql --sigint-ignore"
 alias whatsmyip="curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
