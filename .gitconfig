@@ -2,17 +2,18 @@
 	name = Nicolas Dewez
 	email = nicolas.dewez@sensiolabs.com
 [alias]
-    st              = status
+    st              = status 
+    stu             = status -u
     ci              = commit -v
     cim             = commit -v -m "--"
     co              = checkout
-    br              = branch -v
-    bra             = branch -v -a
+    br              = branch -vv
+    bra             = branch -vv -a
     lg              = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
     lga             = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --all
     lg-grep         = ! git rev-list --all | xargs git grep -F
     di              = diff -M
-    diff-highlight  = "!f() { git diff \"$@\" | ~/src/git/contrib/diff-highlight/diff-highlight; }; f"
+    diw             = diff --color-words=.
     sdi             = diff --cached -M
     dis             = diff --ignore-all-space -M
     logfull         = log --pretty=fuller --graph --stat -p
@@ -38,6 +39,7 @@
 [color]
     ui              = true
 [color "branch"]
+    upstream        = cyan
     current         = yellow bold
     local           = yellow
 [color "diff"]
@@ -63,3 +65,5 @@
     path            = ~/.private-gitconfig
 [init]
     templatedir     = ~/.git-template
+[help]
+	format = html
