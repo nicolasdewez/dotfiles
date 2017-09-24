@@ -1,6 +1,5 @@
 " General
-    filetype on
-    filetype plugin indent on
+    set filetype=on
     set backspace=indent,eol,start  " make backspace a bit more flexible, http://vim.wikia.com/wiki/Backspace_and_delete_problems
     set iskeyword+=_,@,%,#          " none of these are word dividers ???
     set nobackup
@@ -11,9 +10,8 @@
     set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc,*.pyo,*/cache/**,*/logs/** " Ignore certain files
     syntax on
 
-
 " UI
-    set background=light
+    set background=dark
     set cursorline                  " Highlight the current line
     set hlsearch                    " Highlight matches.
     set incsearch                   " Highlight matches as you type.
@@ -39,6 +37,3 @@
     set smartcase                   " but not where there are different cases
     set tabstop=4
 
-" Extra
-    " return at last position
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
