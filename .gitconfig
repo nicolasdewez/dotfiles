@@ -1,6 +1,6 @@
 [user]
 	name = Nicolas Dewez
-	email = nicolas.dewez@sensiolabs.com
+	email = nicolas.dewez@stadline.com
 [alias]
     st              = status 
     stu             = status -u
@@ -25,7 +25,7 @@
     tagg            = ! git fetch origin -t && git tag -f -a -m 'created tag : `cat VERSION`' `cat VERSION` && git push origin --tags
     tagc            = ! TAG=`git describe --tags $(git rev-list --tags --max-count=1) | sed 's/v//' | awk -F . '{ printf "v%d.%d.%d", $1, $2, $3 + 1 }'` && echo $TAG > VERSION && git ci -m "Bumped to version : $TAG" VERSION && git tag -a -m "Created tag $TAG" $TAG  && git push &&  git push --tags
     rebc            = rebase --continue
-    rebt            = rebase --abort
+    reba            = rebase --abort
     rebs            = rebase --skip
     prev            = checkout HEAD^1
     next            = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"

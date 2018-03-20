@@ -34,8 +34,15 @@ alias untargz="tar zxvf"
 alias untarbz1="tar jxvf"
 alias ungz2="bunzip2 -k"
 
+## Docker compose
+alias dc="docker-compose"
+alias dce="docker-compose exec"
+alias dcps="docker-compose ps"
+alias dcu="docker-compose up -d"
+alias dcs="docker-compose stop"
+function dceb() { docker-compose exec $2 $1 bash; }
+
 ## Cool shortcut
-alias doc="docker-compose"
 alias top_process="ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 alias mysql="mysql --sigint-ignore"
 alias whatsmyip="curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
